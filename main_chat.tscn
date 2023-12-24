@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddhdg1wdh0y15"]
+
+[ext_resource type="Script" path="res://MainChat.gd" id="1_m40qc"]
+[ext_resource type="Resource" uid="uid://m32ord3avnu7" path="res://presentself.tres" id="2_lqqfq"]
+[ext_resource type="Theme" uid="uid://dulvfjjem5a6x" path="res://goldman_theme.tres" id="4_7vm5e"]
+
+[node name="MainChat" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m40qc")
+current_account = ExtResource("2_lqqfq")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 377.0
+offset_top = 2.0
+offset_right = 1151.0
+offset_bottom = 647.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ChatBox" type="VBoxContainer" parent="MarginContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="SendMessage" type="LineEdit" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("4_7vm5e")
+text = "hello world"
+
+[node name="ChatSize" type="LineEdit" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "1"
+alignment = 1
+
+[node name="ReturnMainMenu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 557.0
+offset_right = 259.0
+offset_bottom = 588.0
+text = "Return to Main Menu"
+
+[node name="SaveChat" type="Button" parent="."]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 464.0
+offset_right = 199.0
+offset_bottom = 495.0
+text = "Save Chat"
+
+[node name="Loadchat" type="Button" parent="."]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 502.0
+offset_right = 201.0
+offset_bottom = 533.0
+text = "Load Chat"
+
+[connection signal="text_submitted" from="MarginContainer/SendMessage" to="." method="_on_line_edit_text_submitted"]
+[connection signal="text_submitted" from="MarginContainer/ChatSize" to="." method="_on_chat_size_text_submitted"]
+[connection signal="pressed" from="ReturnMainMenu" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="SaveChat" to="." method="_on_save_chat_pressed"]
+[connection signal="pressed" from="Loadchat" to="." method="_on_loadchat_pressed"]

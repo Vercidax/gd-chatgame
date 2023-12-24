@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dulvfjjem5a6x"]
+
+[ext_resource type="FontFile" uid="uid://b2r3nu6r4bqrt" path="res://Goldman-Regular.ttf" id="1_mpq5d"]
+
+[resource]
+default_font = ExtResource("1_mpq5d")
+default_font_size = 16

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Account" load_steps=3 format=3 uid="uid://pih0hkxxjd4r"]
+
+[ext_resource type="Texture2D" uid="uid://cugkfvp8err8f" path="res://frog.png" id="1_ofsiq"]
+[ext_resource type="Script" path="res://Account.gd" id="2_j8oa4"]
+
+[resource]
+script = ExtResource("2_j8oa4")
+AccountImage = ExtResource("1_ofsiq")
+Username = "froggo"
+Description = "im a frog"

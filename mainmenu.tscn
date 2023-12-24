@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsl4kq8015dl3"]
+
+[ext_resource type="Script" path="res://MainMenu.gd" id="1_n8ctm"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n8ctm")
+
+[node name="Enterchat" type="Button" parent="."]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 263.0
+offset_right = 703.0
+offset_bottom = 294.0
+text = "Enter Chat"
+
+[node name="Exitchat" type="Button" parent="."]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 306.0
+offset_right = 705.0
+offset_bottom = 337.0
+text = "Quit Game"
+
+[connection signal="pressed" from="Enterchat" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Exitchat" to="." method="_on_exitchat_pressed"]

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Account" load_steps=7 format=3 uid="uid://m32ord3avnu7"]
+
+[ext_resource type="Texture2D" uid="uid://4qfrgwy8xkeu" path="res://Untitled.png" id="1_ffptb"]
+[ext_resource type="Script" path="res://Account.gd" id="2_6yjfc"]
+[ext_resource type="Script" path="res://Character.gd" id="2_nckel"]
+[ext_resource type="Texture2D" uid="uid://blu8m0xgckj54" path="res://Solomon.png" id="3_2e4v3"]
+
+[sub_resource type="Resource" id="Resource_xj0lk"]
+script = ExtResource("2_nckel")
+CharacterImage = ExtResource("1_ffptb")
+Username = "Jordan"
+Description = "Cuurrent Self"
+
+[sub_resource type="Resource" id="Resource_twaau"]
+script = ExtResource("2_nckel")
+CharacterImage = ExtResource("3_2e4v3")
+Username = "Solomon"
+Description = "Future Self"
+
+[resource]
+script = ExtResource("2_6yjfc")
+Characters = Array[ExtResource("2_nckel")]([SubResource("Resource_xj0lk"), SubResource("Resource_twaau")])
+ActiveCharacter = 0

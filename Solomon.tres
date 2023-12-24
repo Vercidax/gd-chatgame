@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Account" load_steps=3 format=3 uid="uid://bxr5ifpolif51"]
+
+[ext_resource type="Texture2D" uid="uid://blu8m0xgckj54" path="res://Solomon.png" id="1_x5qe0"]
+[ext_resource type="Script" path="res://Account.gd" id="2_c6dep"]
+
+[resource]
+script = ExtResource("2_c6dep")
+AccountImage = ExtResource("1_x5qe0")
+Username = "Solomon"
+Description = "Future Self"
